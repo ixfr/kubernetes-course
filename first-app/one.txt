@@ -1,1 +1,2 @@
+kubectl create -f helloworld.yml 
 sudo kubectl port-forward nodehelloworld.example.com 8080:3000
