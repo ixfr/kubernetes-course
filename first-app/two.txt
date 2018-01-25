@@ -1,0 +1,1 @@
+kubectl expose pod nodehelloworld.example.com --type=NodePort --name node-service
