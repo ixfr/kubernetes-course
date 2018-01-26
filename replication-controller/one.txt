@@ -1,1 +1,4 @@
 kubectl scale --replicas=4 -f helloworld-repl-controller.yml
+kubectl scale --replicas=1 rc/helloworld-controller
+kubectl get rc
+kubectl delete rc/helloworld-controller
