@@ -1,0 +1,14 @@
+kubectl expose deployment helloworld-deployment --type=NodePort
+kubectl get service
+kubectl describe service helloworld-deployment
+sudo minikube service helloworld-deployment --url
+curl http://127.0.0.1:31237
+kubectl set image deployment/helloworld-deployment k8s-demo=wardviaene/k8s-demo:2
+kubectl rollout status deployment/helloworld-deployment
+curl http://127.0.0.1:31237
+kubectl rollout history  deployment/helloworld-deployment
+kubectl rollout undo  deployment/helloworld-deployment
+kubectl rollout history  deployment/helloworld-deployment
+kubectl rollout status deployment/helloworld-deployment
+kubectl edit deployment/helloworld-deployment
+kubectl rollout undo  deployment/helloworld-deployment --to-revision=3
